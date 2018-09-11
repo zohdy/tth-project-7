@@ -1,0 +1,25 @@
+header {
+  grid-area: header;
+  background: $main-color;
+  padding: 20px;
+}
+
+nav {
+  grid-area: nav;
+  background: $main-dark;
+  padding: 20px;
+}
+
+main {
+  grid-area: main;
+}
+
+.site-content {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: 72px 1fr;
+  grid-template-areas:
+          'header header'
+          'nav main';
+}

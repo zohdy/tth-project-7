@@ -1,0 +1,36 @@
+.content-header {
+  .search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search-form {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: 24px;
+
+    input {
+      width: 384px;
+      height: 40px;
+      padding-left: 8px;
+      border: 1px solid $line-color;
+      border-radius: 5px;
+      outline: none;
+    }
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      left: -20px;
+      position: relative;
+      color: $main-color;
+      cursor: pointer;
+      padding: 0;
+      margin-right: -4px;
+    }
+    .fa-search {
+      &::before {
+        margin: -20px;
+      }
+    }
+  }
+}

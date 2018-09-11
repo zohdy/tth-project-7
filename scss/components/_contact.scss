@@ -1,0 +1,141 @@
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $line-color;
+  padding-bottom: 40px;
+  .message-header, .settings-header {
+    margin-top: 24px;
+  }
+  .message {
+    flex: 1;
+    border-right: 1px solid $line-color;
+    margin-left: 24px;
+    padding-right:24px;
+    .autocomplete-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .autocomplete-items {
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 4px;
+      padding: 4px;
+      font-size: .8em;
+      font-weight: 500;
+      color:$font-color;
+
+      &:hover {
+        background-color: rgba(116, 119, 191, 0.1);
+        color: $font-color;
+      }
+    }
+    input {
+      width: 100%;
+      background: #fbfbfb;
+      outline: none;
+      height: 40px;
+      border: 1px solid $line-color;
+      border-radius: 6px;
+      padding-left: 8px;
+      margin-top: 16px;
+    }
+    textarea {
+      width: 100%;
+      background: #fbfbfb;
+      outline: none;
+      border: 1px solid $line-color;
+      border-radius: 6px;
+      padding-left: 8px;
+      padding-top: 16px;
+      height: 128px;
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+    button {
+      width: 100%;
+      background: $main-color;
+      color: $white;
+      text-transform: uppercase;
+      font-size: .8em;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  .settings {
+    flex: 1;
+    padding-left: 24px;
+    padding-right: 24px;
+    .switch-wrapper{
+      margin-top: 24px;
+    }
+    .switch-description {
+      font-size: .85em;
+      color: $font-color;
+      display: inline-block;
+      min-width: 200px;
+      font-weight: 600;
+      opacity: .8;
+    }
+    .onoffswitch {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .select-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 16px;
+    }
+    .timezone-select {
+      display: inline-block;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      width: 100%;
+      outline: none;
+      height: 40px;
+      border: 1px solid $line-color;
+      padding-left: 16px;
+      border-radius: 6px;
+      color: lighten($font-color, 35%);
+      font-size: .8em;
+    }
+    .select-arrow {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      width: 15px;
+      height: 15px;
+      border: solid $main-color;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    button {
+      background: $main-color;
+      color: $white;
+      text-transform: uppercase;
+      font-size: .8em;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      width: calc(50% - 12px);
+    }
+    .save-btn {
+      float: left;
+    }
+    .cancel-btn {
+      float: right;
+      background-color: #b2b2b2;
+    }
+  }
+}

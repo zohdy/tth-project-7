@@ -1,0 +1,75 @@
+body {
+  font-weight: 300;
+  line-height: 1.5;
+  font-family: $font-stack;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.content-title {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: $font-color;
+  display: inline-block;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $font-color;
+  display: inline-block;
+}
+
+.tm-symbol {
+  font-size: .6em;
+  vertical-align: 30%;
+}
+
+.social-title {
+  color: $main-color;
+  margin: 0 0 4px;
+}
+
+.num-of-followers {
+  color: $font-color;
+  font-size: 3em;
+  margin: 0;
+}
+
+.name {
+  font-weight: 500;
+  color: $font-color;
+  font-size: .85em;
+}
+.email {
+  color: $main-color;
+  font-size: .8em;
+  font-weight: 500;
+  text-decoration: none;
+  &:hover {
+    color:$main-dark;
+  }
+}
+.date {
+  color: $font-color;
+  font-size: .8em;
+}
+.time {
+  color: $font-color;
+  font-weight: 600;
+  font-size: .8em;
+  opacity:0.8;
+}
+
+.subject {
+  font-weight: 600;
+  opacity:0.9;
+}
+
+::placeholder {
+  color: lighten($font-color, 35%);
+  font-size: .8em;
+  padding-left: 8px;
+}
