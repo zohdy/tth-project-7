@@ -3,27 +3,65 @@
   flex-wrap: wrap;
   border-top: 1px solid $line-color;
   border-bottom: 1px solid $line-color;
+  @include mq('large'){
+    img {
+      margin-bottom: 8px;
+    }
+  }
+  @include mq('medium'){
+    ul {
+      margin-top: 48px;
+    }
+  }
   .members-header, .activity-header {
     margin-top: 24px;
     margin-left: 24px;
+    @include mq('medium'){
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 24px;
+    }
   }
   .members {
     flex: 1;
-    min-width: 248px;
+    min-width: 360px;
     border-right: 1px solid $line-color;
+    @include mq('medium'){
+      border-bottom: 1px solid $line-color;
+    }
   }
   .members-activity {
     flex: 1;
-    min-width: 248px;
+    min-width: 360px;
+    @include mq('large'){
+      img {
+        margin-left: 32px;
+      }
+    }
+    @include mq('medium'){
+      li {
+        text-align: left;
+      }
+    }
   }
   ul {
     list-style-type: none;
     padding-left: 24px;
+    @include mq('medium'){
+      padding-left: 0;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
     li {
       margin: 24px 40px 0 0;
       padding-bottom: 24px;
       line-height: 1.2;
       border-bottom: 1px solid $line-color;
+      @include mq('medium'){
+        text-align: center;
+        margin-right: 0;
+      }
       &:last-of-type {
         border: none;
       }
@@ -31,16 +69,57 @@
         float: left;
         border-radius: 50%;
         width: 40px;
+        @include mq('large') {
+          float: right;
+        }
       }
       p {
         margin: 0 32px 0 8px;
         display: inline-block;
-        &:first-of-type {
+        @include mq('medium'){
+          margin: 0;
+        }
+      }
+      .name {
           width: 80%;
+          @include mq('large'){
+            margin-right: 10px;
+          }
+          @include mq('medium'){
+            display: block;
+            margin: 0 auto;
+          }
+      }
+      .email {
+        width: 50%;
+        @include mq('medium'){
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 4px;
         }
       }
       .date {
         float: right;
+          @include mq('large') {
+            float: none;
+            display: block;
+            margin-top: 4px;
+          }
+          @include mq('medium'){
+            float: left;
+          }
+      }
+      .time {
+        width: 50%;
+        @include mq('small'){
+          display: none;
+        }
+      }
+      .desc {
+        @extend %clearfix;
+        @include mq('large'){
+          display: block;
+        }
       }
       .next-arrow {
         border: solid $main-color;
@@ -51,6 +130,9 @@
         cursor: pointer;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
+        @include mq('large'){
+          display: none;
+          }
         }
       }
     }

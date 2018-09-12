@@ -6,28 +6,26 @@
     <meta name="description" content="A Web Dashboard project for Team Treehouse">
     <meta name="author" content="Patrick Peter Zohdy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../Downloads/techdegree-project-7-master/css/styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="site-content">
             <header>
-                <div class="logo"><strong>Your</strong>App<span class="tm-symbol">&trade;</span></div>
+                <div class="logo"><strong>Zohdy</strong>App<span class="tm-symbol">&trade;</span></div>
                 <div class="notifications">
-                    <img class="bell-icon highlight" src="icons/icon-bell.svg">
+                    <img class="bell-icon highlight" src="icons/icon-bell.svg" alt="bell icon">
                     <span class="bell-badge"></span>
                 </div>
-                <div class="avatar"><img src="images/avatar.jpg"><span>Josh Sullivan</span></div>
+                <div class="avatar"><img src="images/zohdy_avatar.jpg" alt="avatar"><span>Patrick Peter Zohdy</span></div>
             </header>
             <nav>
                 <ul>
-                    <li class="selected"><a href="#"><img class="highlight" src="icons/icon-dashboard.svg"/></a></li>
-                    <li><a href="#"><img src="icons/icon-members.svg"/></a></li>
-                    <li><a href="#"><img src="icons/icon-visits.svg"/></a></li>
-                    <li><a href="#"><img src="icons/icon-settings.svg"/></a></li>
+                    <li class="selected"><a href="#"><img class="highlight" src="icons/icon-dashboard.svg" alt="dashboard icon"/></a></li>
+                    <li><a href="#"><img src="icons/icon-members.svg" alt="members icon"/></a></li>
+                    <li><a href="#"><img src="icons/icon-visits.svg" alt="vistis icon"/></a></li>
+                    <li><a href="#"><img src="icons/icon-settings.svg" alt="settings icon"/></a></li>
                 </ul>
             </nav>
             <main>
@@ -66,7 +64,7 @@
                         <div class="bar-header subtitle">Daily Traffic</div>
                         <canvas id="traffic-chart-bar"></canvas>
                     </div>
-                    <div class="mb-users-chart-container">
+                    <div class="chart-doughnut-container">
                         <div class="mb-users-header subtitle">Mobile Users</div>
                         <canvas id="mobile-users-chart"></canvas>
                     </div>
@@ -149,25 +147,25 @@
                             <li>
                             <img src="images/member-1.jpg" alt="member-picture">
                                 <p class="name">Victoria Chambers</p>
-                                <p><a class="email" href="mailto:#">victoria.chambers80@example.com</a></p>
+                                <p class="email"><a href="mailto:#">victoria.chambers80@example.com</a></p>
                                 <p class="date">10/15/15</p>
                             </li>
                             <li>
                                 <img src="images/member-2.jpg" alt="member-picture">
                                 <p class="name">Dale Byrd</p>
-                                <p><a class="email" href="mailto:#">dale.byrd52@example.com</a></p>
+                                <p class="email"><a href="mailto:#">dale.byrd52@example.com</a></p>
                                 <p class="date">10/15/15</p>
                             </li>
                             <li>
                                 <img src="images/member-3.jpg" alt="member-picture">
                                 <p class="name">Dawn Wood</p>
-                                <p><a class="email" href="mailto:#">davn.wood16@example.com</a></p>
+                                <p class="email"><a href="mailto:#">davn.wood16@example.com</a></p>
                                 <p class="date">10/15/15</p>
                             </li>
                             <li>
                                 <img src="images/member-4.jpg" alt="member-picture">
                                 <p class="name">Dan Oliver</p>
-                                <p><a class="email" href="mailto:#">dan.oliver82@example.com</a></p>
+                                <p class="email"><a href="mailto:#">dan.oliver82@example.com</a></p>
                                 <p class="date">10/15/15</p>
                             </li>
                         </ul>
@@ -179,21 +177,21 @@
                         <ul>
                             <li>
                                 <img src="images/member-1.jpg" alt="member-picture">
-                                <p class="name">Victoria Chambers commented on
+                                <p class="desc">Victoria Chambers commented on
                                     <span class="subject">YourApp's SEO Tips</span></p>
                                 <p class="time">4 hours ago</p>
                                 <i class="next-arrow"></i>
                             </li>
                             <li>
                                 <img src="images/member-2.jpg" alt="member-picture">
-                                <p class="name">Dale Byrd like the post
+                                <p class="desc">Dale Byrd like the post
                                     <span class="subject">Facebook's Changes for 2016</span>
                                 <p class="time">5 hours ago</p>
                                 <i class="next-arrow"></i>
                             </li>
                             <li>
                                 <img src="images/member-3.jpg" alt="member-picture">
-                                <p class="name">Dawn Wood commented on
+                                <p class="desc">Dawn Wood commented on
                                     <span class="subject">Facebook's Changes for 2016</span>
                                 </p>
                                 <p class="time">5 hours ago</p>
@@ -201,7 +199,7 @@
                             </li>
                             <li>
                                 <img src="images/member-4.jpg" alt="member-picture">
-                                <p class="name">Dan Oliver posted
+                                <p class="desc">Dan Oliver posted
                                     <span class="subject">YourApp's SEO Tips</span></p>
                                 <p class="time">1 day ago</p>
                                 <i class="next-arrow"></i>
@@ -218,7 +216,7 @@
                                 <input id="search-user-input" name="searchUser" type="text" placeholder="Search for User">
                             </div>
                             <label>
-                                <textarea type="text" placeholder="Message for User"></textarea>
+                                <textarea placeholder="Message for User"></textarea>
                             </label>
                             <button type="submit">Send</button>
                         </form>
@@ -255,7 +253,7 @@
                             </div>
                         </div>
                         <div class="select-wrapper">
-                            <select name="timezone" class="timezone-select" type="text">
+                            <select name="timezone" class="timezone-select">
                                 <option disabled="disabled" selected="selected">Select Timezone</option>
                                 <option>One</option>
                                 <option>Two</option>
@@ -272,11 +270,10 @@
                     </div>
                 </div>
             </main>
-        </div>
     </div>
-    <script type="text/javascript" src="js/moment.js"></script>
+    <script src="js/external/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>

@@ -36,14 +36,23 @@ strong {
   color: $font-color;
   font-size: 3em;
   margin: 0;
+  @include mq('large'){
+    font-size: 2em;
+  }
 }
 
 .name {
   font-weight: 500;
   color: $font-color;
-  font-size: .85em;
+  font-size: .8em;
 }
-.email {
+
+.desc {
+  font-weight: 500;
+  color: $font-color;
+  font-size: .8em;
+}
+.email a {
   color: $main-color;
   font-size: .8em;
   font-weight: 500;

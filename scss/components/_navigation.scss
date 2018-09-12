@@ -1,8 +1,16 @@
 nav {
   padding: 16px 0;
+  @include mq('small'){
+    padding:0;
+  }
   ul {
     list-style-type: none;
     padding:0;
+    @include mq('small'){
+      display: flex;
+      padding:0;
+      margin:0;
+    }
     li {
       padding-top: 12px;
       padding-bottom: 12px;
@@ -15,6 +23,13 @@ nav {
       &:first-child {
         margin-top: 0;
       }
+      @include mq('small'){
+        flex: 1;
+        margin: 0;
+        &.selected{
+          border-left: none;
+        }
+      }
       img {
         width: 35%;
         filter: brightness(0.6);
@@ -23,6 +38,9 @@ nav {
         }
         &:hover {
           filter: brightness(1);
+        }
+        @include mq('small'){
+         width: 20%;
         }
       }
     }

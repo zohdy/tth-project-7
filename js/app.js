@@ -34,7 +34,7 @@ alertList.addEventListener('click',(e) => {
 
 // Navbar selection styling
 const ul = document.querySelector('nav ul');
-ul.addEventListener('click', function(e) {
+ul.addEventListener('click', (e) => {
     if(e.target.tagName === 'IMG') {
         const isSelected = document.querySelector('nav li.selected');
         const isHiglighted = document.querySelector('nav img.highlight');
@@ -70,7 +70,7 @@ const users = ['Patrick Peter Zohdy', 'Victoria Chambers', 'Dale Byrd', 'Dawn Wo
 const container = document.querySelector('.autocomplete-container');
 const textArea = document.querySelector('textarea');
 
-searchInputField.addEventListener('keyup', function(e){
+searchInputField.addEventListener('keyup', (e) => {
     let searchString = e.target.value;
     let result = matchPeople(searchString);
     // Dont display results if user backspaces back to start
@@ -82,7 +82,6 @@ searchInputField.addEventListener('keyup', function(e){
 });
 
 function createSearchList(result){
-
     // Clear list after each event is fired
     removeSearchList();
 
@@ -95,7 +94,7 @@ function createSearchList(result){
     }
 
     // Display the selected user in the input field and clear the list
-    container.addEventListener('click', function (e) {
+    container.addEventListener('click', (e) => {
         let chosenUser = e.target.innerHTML;
         if(e.target.className === 'autocomplete-items') {
             searchInputField.value = chosenUser;
@@ -114,7 +113,7 @@ function removeSearchList() {
 // From 'https://stackoverflow.com/a/28321100/10270166'
 function matchPeople(searchInput) {
     let reg = new RegExp(searchInput.split('').join('\\w*').replace(/\W/, ""), 'i');
-    return users.filter(function(user) {
+    return users.filter((user) => {
         if (user.match(reg)) {
             return user;
         }
@@ -181,7 +180,7 @@ saveBtn.addEventListener('click', () => {
 // Prevents default reload on every form element
 const forms = document.querySelectorAll('form');
 for(let i = 0; i < forms.length; i++){
-    forms[i].addEventListener('submit', function (e) {
+    forms[i].addEventListener('submit', (e) => {
         e.preventDefault();
     });
 }
