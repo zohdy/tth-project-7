@@ -15,6 +15,14 @@ main {
   background: white;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+}
+
 
 .clearfix::after {
   content: "";

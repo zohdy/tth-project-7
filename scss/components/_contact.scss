@@ -5,9 +5,16 @@
   padding-bottom: 40px;
   .message-header, .settings-header {
     margin-top: 24px;
+    @include mq('small'){
+      text-align: center;
+      display: block;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
   .message {
     flex: 1;
+    min-width: 400px;
     border-right: 1px solid $line-color;
     margin-left: 24px;
     padding-right:24px;
@@ -64,12 +71,25 @@
       font-weight: 600;
       cursor: pointer;
       outline: none;
+      @include mq('small'){
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
   .settings {
     flex: 1;
+    min-width: 400px;
     padding-left: 24px;
     padding-right: 24px;
+    @include mq('small'){
+      margin-top: 40px;
+      padding: 0;
+      margin-left: 24px;
+      margin-right: 24px;
+      border-top: 1px solid $line-color;
+    }
     .switch-wrapper{
       margin-top: 24px;
     }
