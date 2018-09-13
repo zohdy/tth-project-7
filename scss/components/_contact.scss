@@ -58,6 +58,7 @@
       height: 128px;
       margin-bottom: 8px;
       margin-top: 16px;
+      resize: none;
     }
     button {
       width: 100%;
@@ -122,12 +123,13 @@
       border: 1px solid $line-color;
       padding-left: 16px;
       border-radius: 6px;
+      margin-top: 16px;
       color: lighten($font-color, 35%);
       font-size: .8em;
     }
     .select-arrow {
       position: absolute;
-      top: 10px;
+      top: 24px;
       right: 16px;
       width: 15px;
       height: 15px;
@@ -146,8 +148,6 @@
       padding-bottom: 16px;
       border-radius: 6px;
       font-weight: 600;
-      cursor: pointer;
-      outline: none;
       width: calc(50% - 12px);
     }
     .save-btn {

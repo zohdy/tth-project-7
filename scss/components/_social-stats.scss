@@ -52,11 +52,11 @@
     .social-stats {
       line-height: 1;
       float: right;
+    }
+    .num-of-followers {
+      margin: 0;
       @include mq('small'){
         margin-top: 8px;
-        .num-of-followers{
-          margin-top: 8px;
-        }
       }
     }
   }

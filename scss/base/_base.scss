@@ -15,12 +15,21 @@ main {
   background: white;
 }
 
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
 }
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 

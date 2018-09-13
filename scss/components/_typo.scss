@@ -12,14 +12,12 @@ strong {
   font-size: 1.3em;
   font-weight: 500;
   color: $font-color;
-  display: inline-block;
 }
 
 .subtitle {
   text-transform: uppercase;
   font-weight: 500;
   color: $font-color;
-  display: inline-block;
 }
 
 .tm-symbol {
@@ -35,7 +33,6 @@ strong {
 .num-of-followers {
   color: $font-color;
   font-size: 3em;
-  margin: 0;
   @include mq('large'){
     font-size: 2em;
   }
@@ -56,7 +53,6 @@ strong {
   color: $main-color;
   font-size: .8em;
   font-weight: 500;
-  text-decoration: none;
   &:hover {
     color:$main-dark;
   }
