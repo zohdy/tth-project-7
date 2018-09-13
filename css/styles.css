@@ -109,11 +109,6 @@
     opacity: 0;
   }
 }
-.fade-out {
-  -webkit-animation: fade-out 1s ease-out both;
-  animation: fade-out 1s ease-out both;
-}
-
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1248,6 +1243,11 @@ header .avatar span {
 .modal-content p {
   margin: 0;
   padding: 16px 32px;
+}
+
+.fade-out {
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: fade-out 1s ease-out both;
 }
 
 nav {
