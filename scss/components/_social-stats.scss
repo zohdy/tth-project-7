@@ -1,63 +1,64 @@
-.social-header {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: 24px;
-  display: block;
-  @include mq('small') {
-    margin-bottom: 32px;
-    margin-top:32px;
-    text-align: center;
-  }
-}
-
 .social-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 48px;
-  @include mq('small'){
-    display: block;
+}
+
+.social-header {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: block;
+  text-align: center;
+  @include mq('m'){
+    text-align: left;
   }
-  & > div {
-    width: 32%;
-    min-width: 224px;
-    background: #fbfbfb;
-    border: 1px solid $line-color;
-    @include mq('small'){
-      width: 100%;
-      text-align: center;
-      margin-top: 24px;
-    }
-    .img-box {
-      width: 70px;
-      height: 70px;
-      background: $main-color;
-      border-radius: 50px;
-      background-repeat: no-repeat;
-      background-size: 50%;
-      display: inline-block;
-      margin-left: 24px;
+}
+
+.img-box {
+  background: $main-color;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 16px;
+  float: left;
+}
+
+.social-boxes {
+  @include mq('m'){
+    display: flex;
+  }
+}
+
+.social-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-inner {
+  display: flex;
+  @include mq('s'){
+    justify-content: center;
+  }
+}
+
+.social-outer {
+  padding: 16px;
+  border: 1px solid $line-color;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-width: 400px;
+  @extend %center-element;
+  @include mq('m'){
+    flex: 1;
+    &:first-child {
       margin-right: 16px;
-      @include mq('small'){
-        margin-right: 40px;
-      }
     }
-    .social-inner {
-      display: inline-block;
-      margin-top: 24px;
-      margin-bottom: 24px;
-    }
-    .social-stats {
-      line-height: 1;
-      float: right;
-    }
-    .num-of-followers {
-      margin: 0;
-      @include mq('small'){
-        margin-top: 8px;
-      }
+    &:last-child {
+      margin-left: 16px;
     }
   }
+}
+
+.num-of-followers {
+  margin: 0;
 }

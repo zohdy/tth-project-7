@@ -1,26 +1,26 @@
 @mixin mq($break) {
-  @if $break == 'x-small' {
-    @media (max-width : $break-x-small)  {
+  @if $break == 'xs' {
+    @media (min-width : $break-xs)  {
       @content;
     }
   }
-  @else if $break == 'small' {
-    @media (max-width: $break-small) {
+  @else if $break == 's' {
+    @media (min-width: $break-s) {
       @content;
     }
   }
-  @else if $break == 'medium' {
-    @media (max-width: $break-medium) {
+  @else if $break == 'm' {
+    @media (min-width: $break-m) {
       @content;
     }
   }
-  @else if $break == 'large' {
-    @media (max-width: $break-large) {
+  @else if $break == 'l' {
+    @media (min-width: $break-l) {
       @content;
     }
   }
-  @else if $break == 'x-large' {
-    @media (max-width: $break-x-large) {
+  @else if $break == 'xl' {
+    @media (min-width: $break-xl) {
       @content;
     }
   }

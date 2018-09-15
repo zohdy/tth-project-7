@@ -1,15 +1,9 @@
 .content-header {
-  .search-wrapper {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .search-form {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    margin-right: 24px;
+    /*
     @include mq('small'){
       margin-right: 0;
     }
+    */
 
     input {
       width: 384px;
@@ -33,4 +27,3 @@
       }
     }
   }
-}

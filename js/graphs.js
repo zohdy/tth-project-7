@@ -24,7 +24,7 @@ const lineChart = new Chart(trafficOverviewLine, {
             pointBackgroundColor: '#fff'
         }]
     },
-    options: {
+     options: {
         legend: {
             display: false
         },
@@ -33,9 +33,9 @@ const lineChart = new Chart(trafficOverviewLine, {
                 tension: 0,
             }
         },
-        responsive: true,
-        maintainAspectRatio: false
-    }
+         responsive: true,
+         maintainAspectRatio: false,
+     }
 });
 
 /**********************
@@ -92,7 +92,9 @@ const mbUsersChart = new Chart(mobileUsersChart, {
                 fontColor: '#666'
             }
         }
-    }
+    },
+    responsive: true,
+    maintainAspectRatio: false
 });
 
 chartBtns.addEventListener('click', (e) => {

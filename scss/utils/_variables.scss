@@ -10,13 +10,9 @@ $font-color-light: #fafafd;
 $line-color: #d1d1d1;
 $white : #fff;
 
-// Button Colors
-
 // Layout
-
-// Breakpoints
-$break-x-small: 320px;
-$break-small: 536px;
-$break-medium: 792px;
-$break-large: 1056px;
-$break-x-large: 1200px;
+$break-xs: 320px;
+$break-s: 480px;
+$break-m: 768px;
+$break-l: 992px;
+$break-xl: 1200px;

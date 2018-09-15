@@ -3,13 +3,14 @@ const bellIcon = document.querySelector('.bell-icon');
 const bellBadge = document.querySelector('.notifications .bell-badge');
 const alertBoxItem = document.querySelector('.alert-box-item');
 const alertList = document.querySelector('.alert-list');
+
+// Dim the notification-bell style when clicked
 bellIcon.addEventListener('click', () => {
-    // Dim the notification-bell style
     bellIcon.classList.remove('highlight');
     bellBadge.style.display = 'none';
 
-    // Add min. 2 new alert-items (max 5)
-    for(let i = 0; i < Math.floor(Math.random() * 5) + 2; i++) {
+    // Add min. 2 new alert-items (max 4)
+    for(let i = 0; i < Math.floor(Math.random() * 4) + 2; i++) {
         const newAlertItem = document.createElement('LI');
         const closeBtn = document.createElement('SPAN');
         newAlertItem.textContent = alertBoxItem.childNodes[0].textContent;
@@ -21,7 +22,7 @@ bellIcon.addEventListener('click', () => {
     }
 });
 
-// Close Alert Boxes
+// Close Alert Divs
 alertList.addEventListener('click',(e) => {
     if(e.target.className === 'close') {
         let li = e.target.parentNode;
@@ -63,7 +64,7 @@ for(let i = 0; i < numOfFollowers.length; i++){
 
 
 /*
-     ****************   AUTOCOMPLETE Functionality  ***************
+     ****************   Start of Autocomplete Functionality  ***************
  */
 const searchInputField = document.querySelector('#search-user-input');
 const users = ['Patrick Peter Zohdy', 'Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
@@ -73,7 +74,7 @@ const textArea = document.querySelector('textarea');
 searchInputField.addEventListener('keyup', (e) => {
     let searchString = e.target.value;
     let result = matchPeople(searchString);
-    // Dont display results if user backspaces back to start
+    // Dont display results if user backspaces to start
     if(result.length > 0 && searchString === ''){
         result = '';
     }
@@ -119,6 +120,9 @@ function matchPeople(searchInput) {
         }
     });
 }
+/*
+     ****************   End of Autocomplete Functionality  ***************
+ */
 
 // Modal notifications
 const modal = document.querySelector('.modal');

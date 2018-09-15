@@ -1,37 +1,32 @@
 nav {
   padding: 16px 0;
-  @include mq('small'){
-    padding:0;
-  }
   ul {
-    list-style-type: none;
     padding:0;
-    @include mq('small'){
-      display: flex;
-      padding:0;
-      margin:0;
+    display: flex;
+    margin: 0;
+    @include mq('m'){
+      flex-direction: column;
     }
     li {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      margin-top: 24px;
-      margin-bottom: 24px;
+      flex: 1;
       text-align: center;
-      &.selected {
-        border-left: 4px solid $color-accent;
+      @include mq('m'){
+        margin-top: 32px;
       }
       &:first-child {
-        margin-top: 0;
+        @include mq('m'){
+          margin-top: 16px;
+        }
       }
-      @include mq('small'){
-        flex: 1;
-        margin: 0;
-        &.selected{
-          border-left: none;
+      &.selected {
+        @include mq('m'){
+          padding-top: 8px;
+          padding-bottom: 8px;
+          border-left: 4px solid $color-accent;
         }
       }
       img {
-        width: 35%;
+        width: 20%;
         filter: brightness(0.6);
         &.highlight {
           filter: brightness(1);
@@ -39,8 +34,8 @@ nav {
         &:hover {
           filter: brightness(1);
         }
-        @include mq('small'){
-         width: 20%;
+        @include mq('m'){
+         width: 40%;
         }
       }
     }
