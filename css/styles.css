@@ -109,13 +109,13 @@
     opacity: 0;
   }
 }
-.settings .switch-wrapper:after {
+.settings .switch-wrapper:after, .graph-wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.social-outer, .settings .switch-wrapper, .settings .select-wrapper, .contact-wrapper button, .chart-line-container {
+.social-outer, .settings .switch-wrapper, .settings .select-wrapper, .contact-wrapper button {
   margin-left: auto;
   margin-right: auto;
 }
@@ -536,15 +536,18 @@ a {
   margin-left: 24px;
   margin-right: 24px;
 }
+@media (min-width: 768px) {
+  .chart-line-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 
 .bar-doughnut-wrapper {
   position: relative;
   border-top: 1px solid #d1d1d1;
-}
-@media (min-width: 992px) {
-  .bar-doughnut-wrapper {
-    display: flex;
-  }
 }
 
 .chart-bar-container {
@@ -552,6 +555,15 @@ a {
   padding-bottom: 24px;
   margin-left: 24px;
   margin-right: 24px;
+  max-width: 768px;
+}
+@media (min-width: 768px) {
+  .chart-bar-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 @media (min-width: 992px) {
   .chart-bar-container {
@@ -564,6 +576,15 @@ a {
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 24px;
+  max-width: 768px;
+}
+@media (min-width: 768px) {
+  .chart-doughnut-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .bar-inner {
@@ -572,13 +593,18 @@ a {
 }
 @media (min-width: 992px) {
   .bar-inner {
+    float: left;
+    width: 50%;
     border-right: 1px solid #d1d1d1;
     border-bottom: 0;
   }
 }
 
-.doughnout-inner {
-  flex: 1;
+@media (min-width: 992px) {
+  .doughnout-inner {
+    float: right;
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
   .doughnout-inner .subtitle {
@@ -1105,7 +1131,7 @@ header .avatar span {
 }
 @media (min-width: 992px) {
   .activity .next-arrow {
-    padding: 5px;
+    padding: 6px;
   }
 }
 
@@ -1361,6 +1387,7 @@ strong {
   text-transform: uppercase;
   font-weight: 500;
   color: #666666;
+  font-size: 0.95em;
 }
 
 .tm-symbol {

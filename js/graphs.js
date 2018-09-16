@@ -62,7 +62,7 @@ const barChart = new Chart(trafficOverviewBar, {
             display: false
         }
     },
-    responsive: true,
+    responsive: false,
     maintainAspectRatio: false
 });
 
@@ -93,7 +93,7 @@ const mbUsersChart = new Chart(mobileUsersChart, {
             }
         }
     },
-    responsive: true,
+    responsive: false,
     maintainAspectRatio: false
 });
 

@@ -164,7 +164,7 @@ let publicSetting = JSON.parse(localStorage.getItem('public-profile'));
 // If just one of the settings items is changed
 if(dropdownSelection || emailSetting || publicSetting){
     timeZoneSelectBox.value = dropdownSelection;
-    publicSetting.checked = publicSetting;
+    publicProfileCheckbox.checked = publicSetting;
     emailCheckBox.checked = emailSetting;
 }
 

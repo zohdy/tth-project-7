@@ -1,4 +1,5 @@
 .graph-wrapper {
+  @extend %clearfix;
   border-bottom: 1px solid $line-color;
   .subtitle {
     margin-top: 16px;
@@ -16,18 +17,17 @@
   padding-bottom: 24px;
   margin-left: 24px;
   margin-right: 24px;
-  @extend %center-element;
+  @include mq('m'){
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .bar-doughnut-wrapper {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
   position: relative;
   border-top: 1px solid $line-color;
-  @include mq('l'){
-    display: flex;
-  }
 }
 
 .chart-bar-container {
@@ -35,6 +35,13 @@
   padding-bottom: 24px;
   margin-left: 24px;
   margin-right: 24px;
+  max-width: 768px;
+  @include mq('m'){
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   @include mq('l'){
     border-bottom: 0;
   }
@@ -45,18 +52,30 @@
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 24px;
+  max-width: 768px;
+  @include mq('m'){
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .bar-inner {
   flex: 1;
   border-bottom: 1px solid $line-color;
   @include mq('l'){
+    float: left;
+    width: 50%;
     border-right: 1px solid $line-color;
     border-bottom: 0;
   }
 }
 .doughnout-inner {
-  flex: 1;
+  @include mq('l'){
+    float: right;
+    width: 50%;
+  }
   .subtitle {
     @include mq('l'){
       margin-left: 24px;
