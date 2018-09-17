@@ -169,16 +169,19 @@
   width: 100%;
 }
 .autocomplete-items {
+  text-align: left;
+  margin-left: 1%;
+  margin-right: 1%;
   border-radius: 6px;
   cursor: pointer;
   margin-top: 4px;
-  padding: 4px;
+  padding: 4px 4px 4px 16px;
   font-size: .8em;
   font-weight: 500;
   color:$font-color;
 
   &:hover {
-    background-color: rgba(116, 119, 191, 0.1);
-    color: $font-color;
+    background-color: rgba(116, 119, 191, .9);
+    color: $white;
   }
 }
